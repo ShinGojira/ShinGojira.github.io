@@ -1,43 +1,200 @@
-body {
-    margin: 60px auto;
-    width: 70%;
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0C141F;
+  color: #15abc3;
+  font-size: 14px;
+  text-shadow: 0 0 14px rgba(21,171,195,0.7);
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+* {
+  font-family: 'Share Tech Mono', serif;
+  font-weight: lighter;
+  cursor: crosshair;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+/*add emoji to unordered lists*/
+ul.minidisk {font-size:1.5em;
+        list-style:disc url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);}
+.minidisk li:before, .dejavu {content: "\1F4BD";position:relative;left:-0.5em;}
+/*add emoji to unordered lists*/
+ul.floppy {font-size:1.5em;
+        list-style:disc url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);}
+.floppy li:before, .dejavu {content: "\1F4BE";position:relative;left:-0.5em;}
+/*add emoji to unordered lists*/
+ul.disk {font-size:1.5em;
+        list-style:disc url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);}
+.disk li:before, .dejavu {content: "\1F4BF";position:relative;left:-0.5em;}
+/*add emoji to unordered lists*/
+ul.dvd {font-size:1.5em;
+        list-style:disc url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);}
+.dvd li:before, .dejavu {content: "\1F4C0";position:relative;left:-0.5em;}
+h3 {
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
-a {
-    text-decoration: none;
-    color: #999;
+/*1px blue border*/
+.bord {
+  border: 1px solid #15abc3;
+  background-color:#0C141F;
+  padding: 15px;
 }
-a:hover {
-    text-decoration: underline;
+/*Does not change searchbar but does change search icon*/
+.searchbar {
+  background-color: #0C141F;
+  border-color: #15abc3;
+  color: #15abc3;
 }
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+.blue {
+  color: #15abc3;
+  padding: 0;
 }
+.green {
+  font-weight: bold;
+  padding: 0;
+  color: #3CFF00;
+}
+.orange {
+  color: orange;
+  padding: 0;
+}
+.white {
+  color: white;
+  padding: 0;
+}
+a.blue:hover {
+  color: transparent;
+  text-shadow: 0 0 1px #FBFBFB, 0 0 4px #B6E5EF, 0 0 8px #268398, 0 0 8px #268398, 0 0 10px #268398;
+  text-decoration: underline;
+}
+a.orange:hover {
+  color: transparent;
+  text-shadow: 0 0 1px #FBFBFB, 0 0 4px #FBFEAA, 0 0 8px #F3D91D, 0 0 8px #C47E10, 0 0 10px #C47E10;
+  text-decoration: underline;
+}
+a.white:hover {
+  color: transparent;
+  text-shadow: 0 0 1px #FFFFFF, 0 0 4px #FFFFFF, 0 0 8px #FFFFFF;
+  text-decoration: underline;
+}
+/*blinking text*/
+@keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+.blink {
+  animation: blink 1s step-start 0s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
+}
+/* keyboard */
+.inverse {
+	background-color: rgba(21,171,195,1.0);
+	color: rgba(0,0,0,0.7);
+}
+.glow {
+	-webkit-box-shadow:0 0 5px rgba(21,171,195,1.0);
+	-moz-box-shadow: 0 0 5px rgba(21,171,195,1.0);
+	box-shadow:0 0 5px rgba(21,171,195,1.0);
+}
+.roundy {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.keyboard {
+	width: 27em;
+	border: 4px double rgba(21,171,195,1.0);
+	padding: 4px 0;
+	font-size: 18px;
+	cursor: pointer;
+}
+.keyboard * {
+	cursor: pointer;
+}
+.keyboard-row {
+	clear: both;
+	padding: 4px 0;
+	text-align: center;
+}
+.keyboard-key {
+	border: 1px solid rgba(21,171,195,1.0);
+	display: inline;
+	margin: 2px;
+	padding: 0 5px;
+	height: 20px;
+}
+.keyboard-key:hover {
+	border: 1px solid rgba(36,198,224,1.0);
+	background-color: rgba(36,198,224,1.0);
+	-webkit-box-shadow:0 0 7px rgba(36,198,224,1.0);
+	-moz-box-shadow: 0 0 7px rgba(36,198,224,1.0);
+	box-shadow:0 0 7px rgba(36,198,224,1.0);
+}
+.keyboard-key:active {
+	border: 1px solid rgba(36,198,224,1.0);
+	color: rgba(36,198,224,1.0);
+	background-color: rgba(36,198,224,0.3);
+	-webkit-box-shadow:0 0 7px rgba(36,198,224,1.0);
+	-moz-box-shadow: 0 0 7px rgba(36,198,224,1.0);
+	box-shadow:0 0 7px rgba(36,198,224,1.0);
+}
+/*Neon*/
+/*Turned off as it is VERY CPU INTENSIVE to have Neon Pulse Glow. Can be turned on by switching the animations below*/
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
+  text-align: center;
+  font-size: 7em;
+  margin: 20px 0 20px 0;
 }
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+/*causes a 0.5s delay on ALL anchor tags*/
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+p:nth-child(1) a {
+  color: #15abc3;
+  font-family: 'Monoton';
+  -webkit-animation: none; /*replace with 'neon2 1.5s ease-in-out infinite alternate' to make it Neon glow pulse */
+  animation: none; /*replace with 'neon2 1.5s ease-in-out infinite alternate' to make it Neon glow pulse */
 }
-
-ul.posts li {
-    list-style: none;
+p:nth-child(1) a:hover {
+  color: #15abc3;
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate; /*replace with 'none' to turn off*/
+  animation: neon2 1.5s ease-in-out infinite alternate; /*replace with 'none' to turn off*/
+}
+p a:hover {
+  color: #ffffff;
+}
+/*glow for webkit*/
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+/*glow for mozilla*/
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+/*REEEEEEEEEEESPONSIVE*/
+@media (max-width: 650px) {
+  #container {
+    width: 100%;
+  }
+  p {
+    font-size: 3.5em;
+  }
 }
