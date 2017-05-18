@@ -1,30 +1,236 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Patrick Yee</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Patrick Yee!</h1>
-				<p>Come back for updates soon</p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:">email</a></li>
-        		<li><a href="https://github.com/ShinGojira">github.com/ShinGojira</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+
+<head>
+  <title>TERMINAL HOMEPAGE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<!--glyphicon doesn't work in bootstrap 4.0.0 yet, must use 3.3.7-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One|Share+Tech+Mono" rel="stylesheet">
+  <js time function>
+  <script>
+function startTime() {
+    var today = new Date();
+    var w;
+    switch (today.getDay()) {
+        case 0:
+            w = "Sunday";
+            break;
+        case 1:
+            w = "Monday";
+            break;
+        case 2:
+            w = "Tuesday";
+            break;
+        case 3:
+            w = "Wednesday";
+            break;
+        case 4:
+            w = "Thursday";
+            break;
+        case 5:
+            w = "Friday";
+            break;
+        case  6:
+            w = "Saturday";
+            break;
+        default:
+            w = "weekday";
+    }
+    var mo;
+    switch (today.getMonth()) {
+      case 0:
+        mo = "Jan";
+        break;
+      case 1:
+        mo = "Feb";
+        break;
+      case 2:
+        mo = "Mar";
+        break;
+      case 3:
+        mo = "Apr";
+        break;
+      case 4:
+        mo = "May";
+        break;
+      case 5:
+        mo = "Jun";
+        break;
+      case 6:
+        mo = "Jul";
+        break;
+      case 7:
+        mo = "Aug";
+        break;
+      case 8:
+        mo = "Sep";
+        break;
+      case 9:
+        mo = "Oct";
+        break;
+      case 10:
+        mo = "Nov";
+        break;
+      case 11:
+        mo = "Dec";
+        break;
+      default:
+        mo = "Month";
+    }
+    var d = today.getDate();
+    var y = today.getFullYear();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    n = checkTimez(h);
+    h = checkTimes(h);
+    document.getElementById('txt').innerHTML =
+    w+", "+mo+" "+d +","+ y +" "+ h + ":" + m + ":" + s +" "+ n;
+    // weekday month day,year hh:mm:ss am/pm
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+function checkTimez(j) { // AM or PM
+    if (j < 12) {
+      j = "AM";
+    }else {
+      j = "PM";}
+    return j;
+}
+function checkTimes(j) { // Change 24 Hour Time to Regular Time
+    if (j > 12) {j = j - 12};
+    return j;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+  <div class="container">
+    <div class="row align-items-end"><h1></h1></div>
+
+    <div class="row align-items-end bord">
+      <div class="col">
+        <p><a href="https://github.com/ShinGojira" title="HELLO USER">
+        HELLO USER
+        </a></p>
+        <center><h3>Local Time =
+        <js time function><span id="txt"></span><js time function>
+      </h3></center>
+        <form method="get" action="https://www.google.com/search" target="_blank">
+          <div class="input-group">
+            <input  type="text" class="form-control searchbar" style="background-color:#0C141F; border-color: #15abc3; color: #15abc3;" placeholder="❯[locate]:~$" autofocus="autofocus" name="q">
+            <div class="input-group-btn">
+              <button class="btn btn-default searchbar" type="submit" autofocus="autofocus">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row align-self-center justify-content-center">
+<!--left cell-->
+      <div class="col-md-4 bord">
+        <h3><span class="blue">❯root@virtualBox:<a class="green" target="_blank" href="https://en.wikipedia.org/wiki/Main_Page" title="Wikipedia">~/General $</a><span class="white"> ls</span></h3>
+        <ul class="disk">
+          <li>
+            <a class="blue" target="_blank" href="https://www.facebook.com/">Facebook</a></li>
+          <li>
+            <a class="blue" target="_blank" href="https://discordapp.com/channels/@me">Discord</a></li>
+          <li>
+            <a class="blue" target="_blank" href="https://www.tumblr.com/dashboard">Tumblr</a></li>
+          <li>
+            <a class="blue" target="_blank" href="https://www.rabb.it/">Rabbit</a></li>
+          <li>
+            <a class="blue" target="_blank" href="https://www.youtube.com/">Youtube</a></li>
+          <li>
+            <a class="blue" target="_blank" href="https://www.netflix.com/">Netflix</a></li>
+        </ul>
+      </div>
+<!--middle cell-->
+      <div class="col-md-4 bord ">
+        <h3><span class="blue">❯root@virtualBox:<a class="green" target="_blank" href="https://www.reddit.com/" title="Reddit">~/Reddit $</a><span class="white"> ls</span></h3>
+        <ul class="dvd">
+          <li>
+            <a class="orange" target="_blank" href="https://www.reddit.com/r/buildapcsales/">r/buildapcsales</a></li>
+          <li>
+            <a class="orange" target="_blank" href="https://www.reddit.com/r/3Dprinting/">r/3Dprinting</a></li>
+          <li>
+            <a class="orange" target="_blank" href="https://www.reddit.com/r/Overwatch/">r/Overwatch</a></li>
+          <li>
+            <a class="orange" target="_blank" href="https://www.reddit.com/r/raspberry_pi/">r/raspberry_pi/</a></li>
+          <li>
+            <a class="orange" target="_blank" href="https://www.reddit.com/r/talesfromtechsupport/">r/talesfromtechsupport/</a></li>
+          <li>
+            <a class="orange" target="_blank" href="https://www.reddit.com/r/unixporn/">r/unixporn</a></li>
+        </ul>
+      </div>
+<!--right cell-->
+      <div class="col-md-4 bord">
+        <h3><span class="blue">❯root@virtualBox:~<a class="green" target="_blank" href="https://duckduckgo.com/" title="DuckDuckGo search">/Other</a> $ <span class="blink">&#9646</span></span></h3>
+
+        <ul class="floppy">
+          <li>
+            <a class="white" target="_blank" href="https://slickdeals.net/">Slickdeals</a></li>
+          <li>
+            <a class="white" target="_blank" href="https://deals.kinja.com/">Kinja Deals</a></li>
+          <li>
+            <a class="white" target="_blank" href="https://twitter.com/">Twitter</a></li>
+          <li>
+            <a class="white" target="_blank" href="https://octodon.social/auth/sign_in">Octodon</a></li>
+          <li>
+            <a class="white" target="_blank" href="https://github.com/">Github</a></li>
+          <li>
+            <a class="white" target="_blank" href="https://www.gmail.com/">Email</a></li>
+        </ul>
+      </div>
+
+    </div>
+<non functional js keyboard>
+    <div class="row align-self-center justify-content-center">
+    <div class="keyboard">
+      <script type="text/javascript">
+        (function() {
+          var row = function(left, keys, right) { return [left].concat(keys.split(''), [right]); }
+          var keyboard = [
+            row('Esc',   '1234567890-', 'Back'),
+            row('Tab',   'qwertyuiop<', '>'),
+            row('Caps',  'asdfghjkl;', 'Ret'),
+            row('Shift', 'zxcvbnm,./', 'Shift'),
+            ['          SPACE          ']
+          ];
+
+          var letters = "1234567890qwertyuiopasdfghjklzxcvbnm";
+          for ( var i=0; i<keyboard.length; i++ ) {
+            var keys = keyboard[i];
+            document.write('<div class="keyboard-row">');
+            for ( var j=0; j<keys.length; j++ ) {
+              document.write('<div class="keyboard-key">' + keys[j].toUpperCase().replace(/ /g, '&nbsp;') + '</div>');
+            }
+            document.write('</div>');
+          }
+        })();
+      </script>
+    </div>
+  </div>
+
+  </div>
+<!--bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
 </html>
