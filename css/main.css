@@ -67,6 +67,11 @@ a.blue:hover {
   text-shadow: 0 0 1px #FBFBFB, 0 0 4px #B6E5EF, 0 0 8px #268398, 0 0 8px #268398, 0 0 10px #268398;
   text-decoration: underline;
 }
+a.green:hover {
+  color: transparent;
+  text-shadow: 0 0 1px #FBFBFB, 0 0 4px #a0ff80, 0 0 8px #60ff40, 0 0 8px #407f4f, 0 0 10px #203000;
+  text-decoration: underline;
+}
 a.orange:hover {
   color: transparent;
   text-shadow: 0 0 1px #FBFBFB, 0 0 4px #FBFEAA, 0 0 8px #F3D91D, 0 0 8px #C47E10, 0 0 10px #C47E10;
@@ -151,12 +156,12 @@ p {
   font-size: 7em;
   margin: 20px 0 20px 0;
 }
-/*causes a 0.5s delay on ALL anchor tags*/
+/*causes a 0.5s delay on ALL anchor tags
 a {
   text-decoration: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
+}*/
 p:nth-child(1) a {
   color: #15abc3;
   font-family: 'Monoton';
